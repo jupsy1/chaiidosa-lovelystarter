@@ -29,6 +29,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm opacity-80">
               <li><a href="#about" className="hover:text-primary transition-colors">About Us</a></li>
               <li><a href="#menu" className="hover:text-primary transition-colors">Our Menu</a></li>
+              <li><a href="#reviews" className="hover:text-primary transition-colors">Reviews</a></li>
               <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
               <li><a href="tel:07311522700" className="hover:text-primary transition-colors">Order Takeaway</a></li>
             </ul>

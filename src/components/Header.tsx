@@ -39,6 +39,16 @@ const Header = () => {
               Menu
             </a>
             <a 
+              href="#reviews" 
+              className="text-foreground hover:text-primary transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Reviews
+            </a>
+            <a 
               href="#contact" 
               className="text-foreground hover:text-primary transition-colors cursor-pointer"
               onClick={(e) => {
@@ -121,6 +131,17 @@ const Header = () => {
                 }}
               >
                 Menu
+              </a>
+              <a 
+                href="#reviews" 
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Reviews
               </a>
               <a 
                 href="#contact" 
