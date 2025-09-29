@@ -154,7 +154,7 @@ const Map = () => {
             <Button 
               variant="outline" 
               size="sm"
-              onClick={() => window.open('https://maps.google.com/maps?q=91-92+Ablewell+St+Walsall+WS1+2EU', '_blank')}
+              onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=91-92%20Ablewell%20St,%20Walsall%20WS1%202EU', '_blank')}
               className="w-full"
             >
               <MapPin className="w-4 h-4 mr-2" />
