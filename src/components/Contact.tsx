@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Star } from "lucide-react";
+import Map from "@/components/Map";
 
 const Contact = () => {
   const openingHours = [
@@ -63,23 +64,23 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Phone</h3>
                     <p className="text-muted-foreground mb-3">07311 522700</p>
-            <div className="space-x-2">
-              <Button 
-                size="sm"
-                onClick={() => window.open('tel:07311522700', '_self')}
-                className="hover:scale-105 transition-transform"
-              >
-                Call Now
-              </Button>
-              <Button 
-                variant="outline" 
-                size="sm"
-                onClick={() => window.open('tel:07311522700', '_self')}
-                className="hover:scale-105 transition-transform"
-              >
-                Order Takeaway
-              </Button>
-            </div>
+                    <div className="space-x-2">
+                      <Button 
+                        size="sm"
+                        onClick={() => window.open('tel:07311522700', '_self')}
+                        className="hover:scale-105 transition-transform"
+                      >
+                        Call Now
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        onClick={() => window.open('tel:07311522700', '_self')}
+                        className="hover:scale-105 transition-transform"
+                      >
+                        Order Takeaway
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -105,7 +106,7 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Opening Hours */}
+          {/* Opening Hours & Map */}
           <div>
             <Card>
               <CardContent className="p-6">
@@ -135,18 +136,8 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Map Placeholder */}
-            <Card className="mt-6">
-              <CardContent className="p-0">
-                <div className="h-64 bg-muted rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-muted-foreground">Interactive map coming soon</p>
-                    <p className="text-sm text-muted-foreground mt-1">91-92 Ablewell St, Walsall WS1 2EU</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Interactive Map */}
+            <Map />
           </div>
         </div>
       </div>
