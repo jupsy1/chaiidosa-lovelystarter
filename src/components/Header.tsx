@@ -16,24 +16,49 @@ const Header = () => {
             </h1>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
-              About
-            </a>
-            <a href="#menu" className="text-foreground hover:text-primary transition-colors">
-              Menu
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
-              Contact
-            </a>
-            <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-              <div className="flex items-center space-x-1">
-                <Phone className="w-4 h-4" />
-                <span>07311 522700</span>
+            <nav className="hidden md:flex items-center space-x-8">
+              <a 
+                href="#about" 
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                About
+              </a>
+              <a 
+                href="#menu" 
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Menu
+              </a>
+              <a 
+                href="#contact" 
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Contact
+              </a>
+              <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                <div className="flex items-center space-x-1">
+                  <Phone className="w-4 h-4" />
+                  <span 
+                    className="cursor-pointer hover:text-primary transition-colors"
+                    onClick={() => window.open('tel:07311522700', '_self')}
+                  >
+                    07311 522700
+                  </span>
+                </div>
               </div>
-            </div>
-          </nav>
+            </nav>
 
           {/* Mobile Menu Button */}
           <Button
@@ -53,28 +78,45 @@ const Header = () => {
             <div className="flex flex-col space-y-4">
               <a 
                 href="#about" 
-                className="text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 About
               </a>
               <a 
                 href="#menu" 
-                className="text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Menu
               </a>
               <a 
                 href="#contact" 
-                className="text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-foreground hover:text-primary transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Contact
               </a>
               <div className="flex items-center space-x-1 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                <span>07311 522700</span>
+                <span 
+                  className="cursor-pointer hover:text-primary transition-colors"
+                  onClick={() => window.open('tel:07311522700', '_self')}
+                >
+                  07311 522700
+                </span>
               </div>
             </div>
           </nav>

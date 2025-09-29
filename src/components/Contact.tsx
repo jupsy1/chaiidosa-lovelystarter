@@ -41,7 +41,12 @@ const Contact = () => {
                       Walsall WS1 2EU<br />
                       United Kingdom
                     </p>
-                    <Button variant="outline" size="sm" className="mt-3">
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="mt-3 hover:scale-105 transition-transform"
+                      onClick={() => window.open('https://maps.google.com/maps?q=91-92+Ablewell+St+Walsall+WS1+2EU', '_blank')}
+                    >
                       Get Directions
                     </Button>
                   </div>
@@ -58,10 +63,23 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Phone</h3>
                     <p className="text-muted-foreground mb-3">07311 522700</p>
-                    <div className="space-x-2">
-                      <Button size="sm">Call Now</Button>
-                      <Button variant="outline" size="sm">Order Takeaway</Button>
-                    </div>
+            <div className="space-x-2">
+              <Button 
+                size="sm"
+                onClick={() => window.open('tel:07311522700', '_self')}
+                className="hover:scale-105 transition-transform"
+              >
+                Call Now
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={() => window.open('tel:07311522700', '_self')}
+                className="hover:scale-105 transition-transform"
+              >
+                Order Takeaway
+              </Button>
+            </div>
                   </div>
                 </div>
               </CardContent>

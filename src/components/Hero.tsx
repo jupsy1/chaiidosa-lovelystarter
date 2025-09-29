@@ -3,6 +3,21 @@ import { MapPin, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-dosa-bright.jpg";
 
 const Hero = () => {
+  const scrollToMenu = () => {
+    const menuSection = document.getElementById('menu');
+    if (menuSection) {
+      menuSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const handleOrderTakeaway = () => {
+    // Call the restaurant directly
+    window.open('tel:07311522700', '_self');
+  };
+
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Improved Overlay */}
@@ -31,17 +46,19 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Button 
+              onClick={scrollToMenu}
               size="lg" 
-              className="bg-gradient-to-r from-primary to-accent text-white font-bold px-8 py-4 hover:shadow-2xl transition-all duration-300 text-lg border-2 border-white/20"
+              className="bg-gradient-to-r from-primary to-accent text-white font-bold px-8 py-4 hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg border-2 border-white/20 cursor-pointer"
             >
               View Our Menu
             </Button>
             <Button 
+              onClick={handleOrderTakeaway}
               variant="outline" 
               size="lg"
-              className="border-2 border-foreground bg-background/80 backdrop-blur-sm text-foreground hover:bg-foreground hover:text-background font-bold px-8 py-4 text-lg shadow-lg"
+              className="border-2 border-foreground bg-background/80 backdrop-blur-sm text-foreground hover:bg-foreground hover:text-background hover:scale-105 font-bold px-8 py-4 text-lg shadow-lg transition-all duration-300 cursor-pointer"
             >
-              Order Takeaway
+              Call to Order: 07311 522700
             </Button>
           </div>
 
