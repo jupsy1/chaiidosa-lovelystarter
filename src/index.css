@@ -121,6 +121,11 @@
     @apply bg-background text-foreground;
   }
 
+  /* Text shadow utilities for better readability */
+  .text-shadow-lg {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
   /* Hover scale animation utility */
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-105;
