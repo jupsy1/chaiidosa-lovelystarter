@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Menu from "@/components/Menu";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ToastProviders from "@/components/ToastProviders";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <Menu />
       <Contact />
       <Footer />
+      <ToastProviders />
     </main>
   );
 };
