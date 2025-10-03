@@ -8,8 +8,8 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Add real pages only if they exist and return 200 -->
   <!--
-  Example pages (uncomment and adjust only if these URLs exist and return 200):
   <url>
     <loc>https://www.chaiidosa.com/menu</loc>
     <lastmod>2025-09-29</lastmod>
@@ -35,7 +35,18 @@
     <priority>0.5</priority>
   </url>
   -->
-</urlset>
-https://www.chaiidosa.com/blog/
-https://www.chaiidosa.com/blog/first-article.html
 
+  <!-- Blog URLs -->
+  <url>
+    <loc>https://www.chaiidosa.com/blog/</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.chaiidosa.com/blog/first-article.html</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
